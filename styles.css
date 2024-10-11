@@ -1,28 +1,94 @@
 body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;  /* Light grey background */
+    color: #4a4a4a; /* Dark grey text */
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3c3c3c; /* Neutral dark grey */
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #555555; /* Medium grey */
 }
 
 label {
-    display: flex;
-    flex-direction: column;
-    width: 160px;
-    padding-bottom: 3px;
-}
-
-div.input-display {
-    border-right: 1px solid;
-}
-
-h3#display-total {
     font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
 
-h3#display-tip {
-    font-weight: lighter;
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc; /* Soft grey border */
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fdfdfd; /* Off-white background */
 }
 
-h3#display-people {
-    font-weight: lighter;
+input[type="number"]:focus {
+    border-color: #8e8e8e; /* Grey border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(142, 142, 142, 0.3); /* Soft grey shadow */
+}
+
+/* Layout for the form */
+.input-display {
+    background-color: #fafafa; /* Very light grey */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.input-display div {
+    margin-bottom: 15px;
+}
+
+/* Output display styles */
+section {
+    text-align: center;
+}
+
+#display-tip, #display-total, #display-people {
+    background-color: #f0f0f0; /* Light grey for output boxes */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+#display-tip {
+    color: #7d7d7d; /* Medium grey for tip output */
+}
+
+#display-total {
+    color: #5e5e5e; /* Darker grey for total output */
+}
+
+#display-people {
+    color: #a58e7b; /* Neutral brown for per-person output */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 500px) {
+    .input-display {
+        width: 90%;
+    }
 }
